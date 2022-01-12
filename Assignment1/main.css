@@ -1,0 +1,18 @@
+body{
+    margin: 0px;
+    background-color: #dedede;
+}
+
+#inputs{
+    background-color: darkgreen;
+    padding: 10px 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#table{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
