@@ -16,9 +16,8 @@ body{
         display: flex;
         justify-content: center;
     }
+}
 
-
-  }
 h1{
     display: block;
     margin: 10px;
@@ -36,14 +35,9 @@ h1{
 
 #logo{
     float: right;
-    width: 70px;
-    height: 40px;
     vertical-align: middle;
-
-}
-
-.navbar{
-
+    height: 40px;
+    width: 70px;
 }
 
 header{
@@ -54,9 +48,8 @@ header{
     justify-content: space-between;
     background-color: #2B8EFF;
     -webkit-box-shadow: 0px 10px 17px 7px #000000;
-box-shadow: 0px 10px 17px 7px #000000;
+    box-shadow: 0px 10px 17px 7px #000000;
 }
-
 
 .navbar a{
     display: inline-block;
@@ -66,7 +59,8 @@ box-shadow: 0px 10px 17px 7px #000000;
     padding: 7px;
     color: white;
     text-decoration: none;
-    font: italic  Bauhaus, sans-serif;
+    font-style: italic;
+    font-family: Bauhaus, sans-serif;
     text-align: center;
     border-radius: 25%;
     background-color: #3B9EEF;
@@ -77,7 +71,7 @@ box-shadow: 0px 10px 17px 7px #000000;
 }
 
 #google:link{
-    background-color: none;
+    background-color: rgb(255, 149, 232);
 }
 
 #google:visited{
@@ -168,6 +162,10 @@ box-shadow: 0px 10px 17px 7px #000000;
     list-style-image:  linear-gradient(to left bottom, #F25278, white);
 }
 
+.lists dl{
+    margin: 20px;
+}
+
 #hlist{
     margin-top: 70px;
     font-weight: bold;
@@ -186,7 +184,7 @@ box-shadow: 0px 10px 17px 7px #000000;
 .information h2{
     border: 3px double white;
     text-align: center;
-    font: normal 20px Galahad, galahad-std;
+    font: normal 30px Galahad, galahad-std;
 }
 
 .information p{
