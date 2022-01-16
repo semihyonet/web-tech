@@ -1,18 +1,194 @@
 body{
     margin: 0px;
-    background-color: #dedede;
+    background-color: #3D3D3D;
+    color: white;
+    page-break-before: auto;
+    page-break-after: auto;
 }
 
-#inputs{
-    background-color: darkgreen;
+h1{
+    display: block;
+    margin: 10px;
+    text-align: center;
+    font: normal 40px Galahad, galahad-std;
+    text-transform: uppercase;
+}
+
+#logo{
+    float: right;
+    width: 70px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.navbar{
+    background-image: url("https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid white;
+}
+
+.navbar a{
+    display: inline-block;
+    margin: 5px 0px 5px 40px;
+    border: 2px outset white;
+    width: 70px;
+    padding: 7px;
+    color: white;
+    text-decoration: none;
+    font: italic 20px Bauhaus, sans-serif;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: #F25278;
+}
+
+#google:link{
+    background-color: none;
+}
+
+#google:visited{
+    background-color: #773242;
+}
+
+.paragraph{
+    margin: 30px;
+    text-align: center;
+}
+
+.paragraph h2{
+    display: inline;
+    padding: 5px;
+    font: italic 30px Braganza ITC, Bold;
+    border: 3px dotted #F25278;
+}
+
+@media all and (max-width: 400px){
+    .paragraph h2{
+        font-size: 6.5vw;
+    }
+}
+
+.paragraph p{
+    font: italic 20px Bauhaus, sans-serif;
+}
+
+.table{
+    margin: 40px 1vw 30px 1vw;
+    display: block;
+    align-content: center;
+    justify-content: center;
+    border-collapse: separate;
+    border-spacing: 0.5vw;
+}
+
+#caption{
+    background-color: #F25278;
+    font: italic 22px Galahad, galahad-std;
+    caption-side: top;
+}
+
+#content th{
+    font: normal 15px Galahad, galahad-std;
+    color: #F25278;
+    background-color: white;
+    width:20vw;
+    font: normal 15px Bauhaus, sans-serif;
+}
+
+.table td{
+    text-align: center;
+    font: italic 2.5vw Braganza ITC, Bold;
+    border: 2px solid white;
+}
+
+.table figcaption{
+    text-decoration: underline overline; 
+}
+
+.table img{
+    width: 25vw;
+    height: 30vw;
+}
+
+.lists{
+    font-variant: small-caps;
+    font-size: 18px;
+    width: 90vw;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 810px){
+    .lists{
+        columns: 3;
+        orphans: 3;
+        widows: 2;
+    }
+}
+
+.lists ul{
+    list-style: square inside none;
+}
+
+.lists ol{
+    list-style: inside;
+    list-style-image:  linear-gradient(to left bottom, #F25278, white);
+}
+
+#hlist{
+    margin-top: 70px;
+    font-weight: bold;
+    text-align: center;
+    font: bold 20px Braganza ITC, Bold;
+    text-transform: uppercase;
+}
+
+.information{
+    margin: 20px;
+    border-collapse: separate;
+    border-spacing: 50px;
+    margin-bottom: 50px;
+}
+
+.information h2{
+    border: 3px double white;
+    text-align: center;
+    font: normal 20px Galahad, galahad-std;
+}
+
+.information p{
+    text-indent: 45px;
+    font: normal 18px Galahad, galahad-std;
+}
+
+.inputs{
+    background-image: url("https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 10px 20px;
-    display: flex;
+    display: block;
     align-content: center;
     justify-content: center;
-}
-#table{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    border-top: 3px double #F25278;
 }
 
+.inputs input:focus{
+    background-color: rgb(255, 189, 222);
+}
+
+#image, #brand, #model, #os, #screensize{
+    width: 90vw;
+}
+
+#submit{
+    margin: 15px 0px 15px 0px;
+    width: 90vw;
+    font: italic 20px Bauhaus, sans-serif;
+    color: white;
+    background-color: #F25278;
+}
+
+#submit:active{
+    background-color: #3D3D3D;
+}

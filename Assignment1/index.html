@@ -10,60 +10,97 @@
     </head>
     <body>
         <header>
-            <h1>Web Shop A1</h1>
-            <nav>
+            <h1>Webshop A1<img id="logo" alt="logo" src="https://www.pngall.com/wp-content/uploads/2017/05/Copyright-Symbol-PNG-Images.png" /></h1>
+            <nav class="navbar">
                 <a href="index.html">Home</a>
+                <a id="google" href="https://www.google.com/">Google</a>
             </nav>
         </header>
         <main>
-            <section>
-                <h2>Hello customers!</h2>
-                <p>Welcome to our shop. Our products are displayed below.</p>
+            <section class="paragraph">
+                <h2>Start shopping <em>right away!</em></h2>
+                <p><strong>Webshop A1</strong> is the best place to buy your new iPhone</p>
             </section>
-            <table id="table">
-                <tr>
+            <table class="table">
+                <caption id="caption">Product List</caption><br>
+                <tr id="content">
+                    <th>Image</th>
                     <th>Brand</th>
                     <th>Model</th>
-                    <th>Os</th>
+                    <th>OS</th>
                     <th>Screensize</th>
-                    <th>Image</th>
                 </tr>
                 <tr>
+                    <td>
+                        <figure>
+                            <img alt="iPhone 13" height="150"
+                            src="https://www.theiphonewiki.com/w/images/thumb/3/37/IPhone_13.png/761px-IPhone_13.png" />
+                            <figcaption>iPhone 13</figcaption>
+                        </figure>
+                    </td>
                     <td>Apple</td>
                     <td>iPhone 13</td>
                     <td>iOS 15</td>
-                    <td>155&nbsp;mm</td>
-                    <td><img alt="iPhone 13" height="150"
-                        src="https://www.theiphonewiki.com/w/images/thumb/3/37/IPhone_13.png/761px-IPhone_13.png" /></td>  
+                    <td>155&nbsp;mm</td> 
                 </tr>
-        
                 <tr>
+                    <td>
+                        <figure>
+                            <img alt="iPhone 13 mini" height="150"
+                            src="https://www.theiphonewiki.com/w/images/thumb/1/17/IPhone_13_mini.png/761px-IPhone_13_mini.png" />
+                            <figcaption>iPhone 13 mini</figcaption>
+                        </figure>
+                    </td>  
                     <td>Apple</td>
                     <td>iPhone 13 mini</td>
                     <td>iOS 15</td>
-                    <td>138&nbsp;mm</td>
-                    <td><img alt="iPhone 13 mini" height="150"
-                        src="https://www.theiphonewiki.com/w/images/thumb/1/17/IPhone_13_mini.png/761px-IPhone_13_mini.png" /></td>    
+                    <td>138&nbsp;mm</td> 
                 </tr>
-        
                 <tr>
+                    <td>
+                        <figure>
+                            <img alt="iPhone 13 Pro Max" height="150"
+                            src="https://www.theiphonewiki.com/w/images/thumb/7/7d/IPhone_13_Pro_Max.png/761px-IPhone_13_Pro_Max.png" />
+                            <figcaption>iPhone 13 Pro Max</figcaption>
+                        </figure>
+                    </td>
                     <td>Apple</td>
                     <td>iPhone 13 Pro Max</td>
                     <td>iOS 15</td>
                     <td>170 &nbsp;mm</td>
-                    <td><img alt="iPhone 13 Pro Max" height="150"
-                        src="https://www.theiphonewiki.com/w/images/thumb/7/7d/IPhone_13_Pro_Max.png/761px-IPhone_13_Pro_Max.png" /></td>
                 </tr>
             </table>
-            <form id="inputs">
-                <input>
-                <input>
-                <input>
-                <input>
-                <input>
-                <button >
-                    Submit
-                </button>
+            <h2 id="hlist">Why you should use <abbr title="Webshop A1">WA1</abbr>:</h2>
+            <section class="lists">
+                <ul>
+                    <li>Nice looking website</li>
+                    <li>Great user interface</li>
+                </ul>
+                <ol>
+                    <li>Quick delivery of the products</li>
+                    <li>Easy checkout</li>
+                </ol>
+                <dl>
+                    <dd>Great return policy for all products</dd>
+                    <dd>Great customer support</dd>
+                </dl>
+            </section>
+            <section class="information">
+                <h2><pre>Delivery information: </pre></h2>
+                <p>All orders are processed within 2 to 4 business days (excluding weekends and holidays) after receiving your order confirmation email. You will receive another notification when your order has shipped.</p>
+            </section>
+            <form class="inputs" action="https://wt.ops.labs.vu.nl/api22/????????" method="post">
+                <label for="image">Picture url:<br></label>
+                <input type="text" id="image" required><br>
+                <label for="brand">Brand:<br></label>
+                <input type="text" id="brand" required><br>
+                <label for="model">Model:<br></label>
+                <input type="text" id="model" required><br>
+                <label for="os">OS:<br></label>
+                <input type="text" id="os" required><br>
+                <label for="screensize">Screensize:<br></label>
+                <input type="text" id="screensize" required><br>
+                <input type="submit" id="submit">
             </form>
         </main>
     </body>
