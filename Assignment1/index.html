@@ -6,18 +6,19 @@
         <title>Web Shop A1</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-        <script src='main.js'></script>
+
     </head>
     <body>
         <header>
             <h1>Webshop A1<img id="logo" alt="logo" src="https://www.pngall.com/wp-content/uploads/2017/05/Copyright-Symbol-PNG-Images.png" /></h1>
             <nav class="navbar">
-                <a href="index.html">Home</a>
+                <a href="#home">Home</a>
+                <a href="#inputs">Order</a>
                 <a id="google" href="https://www.google.com/">Google</a>
             </nav>
         </header>
         <main>
-            <section class="paragraph">
+            <section id="home" class="paragraph">
                 <h2>Start shopping <em>right away!</em></h2>
                 <p><strong>Webshop A1</strong> is the best place to buy your new iPhone</p>
             </section>
@@ -41,7 +42,7 @@
                     <td>Apple</td>
                     <td>iPhone 13</td>
                     <td>iOS 15</td>
-                    <td>155&nbsp;mm</td> 
+                    <td>155&nbsp;mm</td>
                 </tr>
                 <tr>
                     <td>
@@ -50,11 +51,11 @@
                             src="https://www.theiphonewiki.com/w/images/thumb/1/17/IPhone_13_mini.png/761px-IPhone_13_mini.png" />
                             <figcaption>iPhone 13 mini</figcaption>
                         </figure>
-                    </td>  
+                    </td>
                     <td>Apple</td>
                     <td>iPhone 13 mini</td>
                     <td>iOS 15</td>
-                    <td>138&nbsp;mm</td> 
+                    <td>138&nbsp;mm</td>
                 </tr>
                 <tr>
                     <td>
@@ -89,17 +90,17 @@
                 <h2><pre>Delivery information: </pre></h2>
                 <p>All orders are processed within 2 to 4 business days (excluding weekends and holidays) after receiving your order confirmation email. You will receive another notification when your order has shipped.</p>
             </section>
-            <form class="inputs" action="https://wt.ops.labs.vu.nl/api22/????????" method="post">
+            <form class="inputs" id="inputs"  action="https://wt.ops.labs.vu.nl/api22/3ab02f27" method="post">
                 <label for="image">Picture url:<br></label>
-                <input type="text" id="image" required><br>
+                <input type="text" id="image" required name="image"><br>
                 <label for="brand">Brand:<br></label>
-                <input type="text" id="brand" required><br>
+                <input type="text" id="brand" name="brand" required><br>
                 <label for="model">Model:<br></label>
-                <input type="text" id="model" required><br>
+                <input type="text" id="model" name="model" required><br>
                 <label for="os">OS:<br></label>
-                <input type="text" id="os" required><br>
+                <input type="text" id="os" name="os" required><br>
                 <label for="screensize">Screensize:<br></label>
-                <input type="text" id="screensize" required><br>
+                <input type="text" id="screensize" name="screensize" required><br>
                 <input type="submit" id="submit">
             </form>
         </main>

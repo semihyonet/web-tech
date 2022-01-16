@@ -1,17 +1,37 @@
 body{
-    margin: 0px;
-    background-color: #3D3D3D;
+    margin: 20vh 0px 0px 0px;
+
+    background-color: #4D4D4D;
     color: white;
     page-break-before: auto;
     page-break-after: auto;
+    overflow-x: hidden;
 }
 
+@media screen and (max-width: 690px) {
+    header {
+        flex-direction: column;
+    }
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+
+  }
 h1{
     display: block;
     margin: 10px;
     text-align: center;
     font: normal 40px Galahad, galahad-std;
     text-transform: uppercase;
+    background: #CFC91D;
+    background: -webkit-radial-gradient(circle farthest-corner at center center, #CFC91D 0%, #CF1512 100%);
+    background: -moz-radial-gradient(circle farthest-corner at center center, #CFC91D 0%, #CF1512 100%);
+    background: radial-gradient(circle farthest-corner at center center, #CFC91D 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 #logo{
@@ -19,25 +39,37 @@ h1{
     width: 70px;
     height: 40px;
     vertical-align: middle;
+
 }
 
 .navbar{
-    background-image: url("https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-bottom: 3px solid white;
+
 }
+
+header{
+    position:fixed;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #2B8EFF;
+    -webkit-box-shadow: 0px 10px 17px 7px #000000;
+box-shadow: 0px 10px 17px 7px #000000;
+}
+
 
 .navbar a{
     display: inline-block;
-    margin: 5px 0px 5px 40px;
+    margin: 2vh 2vw 5px 0px;
     border: 2px outset white;
-    width: 70px;
+
     padding: 7px;
     color: white;
     text-decoration: none;
-    font: italic 20px Bauhaus, sans-serif;
+    font: italic  Bauhaus, sans-serif;
     text-align: center;
+    border-radius: 25%;
+    background-color: #3B9EEF;
 }
 
 .navbar a:hover{
@@ -61,7 +93,7 @@ h1{
     display: inline;
     padding: 5px;
     font: italic 30px Braganza ITC, Bold;
-    border: 3px dotted #F25278;
+    border: 3px dotted #2B8EFF;
 }
 
 @media all and (max-width: 400px){
@@ -75,7 +107,7 @@ h1{
 }
 
 .table{
-    margin: 40px 1vw 30px 1vw;
+    margin: 4px 1vw 30px 1vw;
     display: block;
     align-content: center;
     justify-content: center;
@@ -104,7 +136,7 @@ h1{
 }
 
 .table figcaption{
-    text-decoration: underline overline; 
+    text-decoration: underline overline;
 }
 
 .table img{
