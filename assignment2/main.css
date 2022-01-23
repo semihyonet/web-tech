@@ -100,7 +100,7 @@ header{
     font: italic 20px Bauhaus, sans-serif;
 }
 
-.table{
+#table{
     margin: 4px 1vw 30px 1vw;
     display: block;
     align-content: center;
@@ -123,17 +123,17 @@ header{
     font: normal 15px Bauhaus, sans-serif;
 }
 
-.table td{
+#table td{
     text-align: center;
     font: italic 2.5vw Braganza ITC, Bold;
     border: 2px solid white;
 }
 
-.table figcaption{
+#table figcaption{
     text-decoration: underline overline;
 }
 
-.table img{
+#table img{
     width: 25vw;
     height: 30vw;
 }
@@ -221,4 +221,12 @@ header{
 
 #submit:active{
     background-color: #3D3D3D;
+}
+
+#reset {
+    margin: 5px 0px 15px 20px;
+    width: 90vw;
+    font: italic 20px Bauhaus, sans-serif;
+    color: white;
+    background-color: rgb(94, 94, 255);
 }

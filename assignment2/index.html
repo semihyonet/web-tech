@@ -6,7 +6,8 @@
         <title>Web Shop A1</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <header>
@@ -22,54 +23,16 @@
                 <h2>Start shopping <em>right away!</em></h2>
                 <p><strong>Webshop A1</strong> is the best place to buy your new iPhone</p>
             </section>
-            <table class="table">
+            <table id="table">
                 <caption id="caption">Product List</caption>
                 <tr id="content">
                     <th>Image</th>
-                    <th>Brand</th>
-                    <th>Model</th>
-                    <th>OS</th>
-                    <th>Screensize</th>
+                    <th onclick="sortTable(1)">Brand</th>
+                    <th onclick="sortTable(2)">Model</th>
+                    <th onclick="sortTable(3)">OS</th>
+                    <th onclick="sortTable(4)">Screensize</th>
                 </tr>
-                <tr>
-                    <td>
-                        <figure>
-                            <img alt="iPhone 13" height="150"
-                            src="https://www.theiphonewiki.com/w/images/thumb/3/37/IPhone_13.png/761px-IPhone_13.png" />
-                            <figcaption>iPhone 13</figcaption>
-                        </figure>
-                    </td>
-                    <td>Apple</td>
-                    <td>iPhone 13</td>
-                    <td>iOS 15</td>
-                    <td>155&nbsp;mm</td>
-                </tr>
-                <tr>
-                    <td>
-                        <figure>
-                            <img alt="iPhone 13 mini" height="150"
-                            src="https://www.theiphonewiki.com/w/images/thumb/1/17/IPhone_13_mini.png/761px-IPhone_13_mini.png" />
-                            <figcaption>iPhone 13 mini</figcaption>
-                        </figure>
-                    </td>
-                    <td>Apple</td>
-                    <td>iPhone 13 mini</td>
-                    <td>iOS 15</td>
-                    <td>138&nbsp;mm</td>
-                </tr>
-                <tr>
-                    <td>
-                        <figure>
-                            <img alt="iPhone 13 Pro Max" height="150"
-                            src="https://www.theiphonewiki.com/w/images/thumb/7/7d/IPhone_13_Pro_Max.png/761px-IPhone_13_Pro_Max.png" />
-                            <figcaption>iPhone 13 Pro Max</figcaption>
-                        </figure>
-                    </td>
-                    <td>Apple</td>
-                    <td>iPhone 13 Pro Max</td>
-                    <td>iOS 15</td>
-                    <td>170 &nbsp;mm</td>
-                </tr>
+                
             </table>
             <h3 id="hlist">Why you should use <abbr title="Webshop A1">WA1</abbr>:</h3>
             <section class="lists">
@@ -91,7 +54,7 @@
                 <p>All orders are processed within 2 to 4 business days (excluding weekends and holidays) after receiving your order confirmation email. You will receive another notification when your order has shipped.</p>
                 <pre>-Webshop A1 team</pre>
             </section>
-            <form class="inputs" id="inputs"  action="https://wt.ops.labs.vu.nl/api22/3ab02f27" method="post">
+            <form class="inputs" id="inputs" action="https://wt.ops.labs.vu.nl/api22/3ab02f27" method="post">
                 <label for="image">Picture url:<br></label>
                 <input type="text" id="image" required name="image"><br>
                 <label for="brand">Brand:<br></label>
@@ -102,10 +65,15 @@
                 <input type="text" id="os" name="os" required><br>
                 <label for="screensize">Screensize:<br></label>
                 <input type="text" id="screensize" name="screensize" required><br>
-                <input type="submit" id="submit">
+
             </form>
+
+            <button  id="submit">Submit </button>
+            <button id="reset">Reset</button>
+            <div id="result"></div>
         </main>
     </body>
+
 </html>
 
 <!--We tested our website in 3 different browsers: Google Chrome, Microsoft Edge, Firefox. In all browsers our website looked and behaved the same, which was a very delightful sight. To test our website's responsivness we used developer tools for all 3 browsers. The results for different browsers where the same once again. We tested the print style with the print review button on each browser. At first the website in print was unreadable, because one of the images was way bigger than the rest of the website. We fixed that by setting height and width in the html file. Everything else looked very well in the print review, therefore we left it as it was.-->
