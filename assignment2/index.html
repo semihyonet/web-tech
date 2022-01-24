@@ -32,7 +32,7 @@
                     <th onclick="sortTable(3)">OS</th>
                     <th onclick="sortTable(4)">Screensize</th>
                 </tr>
-                
+
             </table>
             <h3 id="hlist">Why you should use <abbr title="Webshop A1">WA1</abbr>:</h3>
             <section class="lists">
@@ -64,12 +64,13 @@
                 <label for="os">OS:<br></label>
                 <input type="text" id="os" name="os" required><br>
                 <label for="screensize">Screensize:<br></label>
-                <input type="text" id="screensize" name="screensize" required><br>
+                <input type="number" id="screensize" name="screensize" required><br>
 
             </form>
-
-            <button  id="submit">Submit </button>
-            <button id="reset">Reset</button>
+            <div>
+                <button class="form-btn" id="submit">Submit </button>
+                <button class="form-btn" id="reset">Reset</button>
+            </div>
             <div id="result"></div>
         </main>
     </body>
