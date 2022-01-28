@@ -2,16 +2,17 @@
   "name": "assignment3",
   "version": "1.0.0",
   "description": "This is a node.js package for handling CRUD Operations",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "nodemon index.js"
+    "start": "node server.js",
+    "test": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
+    "express-validator": "^6.14.0",
     "sqlite3": "^5.0.2"
   }
 }
