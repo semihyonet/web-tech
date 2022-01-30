@@ -6,49 +6,105 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Documentation For Phone API</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 
 <body>
-    <h1> Resource Information: </h1>
+    <h1> GET Index </h1>
+    <strong>The GET method requests a representation of the specified resource. The GET Index requests a representation of the whole data in the web server.</strong>
+    <h2>Resource URL</h2>
+    <p>http://localhost:3000</p>
+    <h2>Resource Information</h2>
+    <p>Response formats: JSON</p>
+    <h2>Example Request</h2>
+    <p>curl --location --request GET 'http://localhost:3000'</p><br>
+    
 
-    - Response formats - JSON
-    - Requires authentication - No
+    <h1>GET Show</h1>
+    <strong>The GET method requests a representation of the specified resource. The GET Show requests a representation of a specific item with a specific id paramater.</strong>
+    <h2>Resource URL</h2>
+    <p>http://localhost:3000</p>
+    <h2>Resource Information</h2>
+    <p>Response formats: JSON</p>
+    <h2>Parameters</h2>
+    <table>
+        <tr>
+            <th>Name</th><th>Required</th><th>Description</th><th>Example</th>
+        </tr>
+        <tr>
+            <td>id</td><td>required</td><td>The numeric value that represents the location from where to return trending information for from.</td><td>2</td>
+        </tr>
+    </table>
+    <h2>Example Request</h2>
+    <p>curl --location --request GET 'http://localhost:3000/2'</p><br>
 
-    <h1> Parameters: </h1>
-    NAME REQUIRED DESCRIPTION
-    - id - required - The numeric value that represents the location
-    from where to return trending information for from
-    - brand - optional - Returns results of the brand of the phone
-    - model - optional - Returns results of the model of the phone
-    - os - optional - Returns results of the operating system of the phone
-    - image - optional - Returns results of the image url of the phone
-    - screensize - optional - Returns results of the screensize of the phone
 
-    Example Request:
-    `INSERT INTO phones VALUES phones.db`
+    <h1>POST Create</h1>
+    <strong>The POST method submits an entity to the specified resource causing a change in state or side effects on the server. The POST Create submits data to the web server.</strong>
+    <h2>Resource URL</h2>
+    <p>http://localhost:3000</p>
+    <h2>Resource Information</h2>
+    <p>Response formats: JSON</p>
+    <h2>Example Request</h2>
+    <p>curl --location --request POST 'http://localhost:3000' \
+        --data-raw '{
+            "os":"OSX",
+            "brand": "Apple",
+            "model" : "Iphone X",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+            "screensize":5.12
+        }'</p>
+    <h2>Example Response</h2>
+    <p>{
+        "os":"OSX",
+        "brand": "Apple",
+        "model" : "Iphone X",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+        "screensize":5.12
+    }</p><br>
 
-    Example Response:
-    [
-    {
-    "id": 58831,
-    "brand": "Apple",
-    "model": "iPhone X",
-    "os": "iOS",
-    "image":
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png",
-    "screensize": 5
-    },
-    {
-    "id": 58832,
-    "brand": "Samsung",
-    "model": "Galaxy s8",
-    "os": "Android",
-    "image":
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Samsung_Galaxy_S8_and_S8_Plus.png/569px-Samsung_Galaxy_S8_and_S8_Plus.png",
-    "screensize": 6
-    }
-    ]
+
+    <h1>PUT Update</h1>
+    <strong>The PUT method replaces all current representations of the target resource with the request payload.</strong>
+    <h2>Resource URL</h2>
+    <p>http://localhost:3000</p>
+    <h2>Resource Information</h2>
+    <p>Response formats: JSON</p>
+    <h2>Parameters</h2>
+    <table>
+        <tr>
+            <th>Name</th><th>Required</th><th>Description</th><th>Example</th>
+        </tr>
+        <tr>
+            <td>id</td><td>required</td><td>The numeric value that represents the location from where to return trending information for from.</td><td>4</td>
+        </tr>
+    </table>
+    <h2>Example Request</h2>
+    <p>curl --location --request PUT 'http://localhost:3000/4' \
+        --data-raw '{
+            "model": "Something Else"
+        }'</p>
+    <h2>Example Response</h2>
+    <p>{
+        "model": "Something Else"
+    }</p><br>
+
+    <h1>DEL Destroy</h1>
+    <strong>The DELETE method deletes the specified resource.</strong>
+    <h2>Resource URL</h2>
+    <p>http://localhost:3000</p>
+    <h2>Resource Information</h2>
+    <p>Response formats: JSON</p>
+    <h2>Parameters</h2>
+    <table>
+        <tr>
+            <th>Name</th><th>Required</th><th>Description</th><th>Example</th>
+        </tr>
+        <tr>
+            <td>id</td><td>required</td><td>The numeric value that represents the location from where to return trending information for from.</td><td>4</td>
+        </tr>
+    </table>
+    <h2>Example Request</h2>
+    <p>curl --location --request DELETE 'http://localhost:3000/4'</p>
 </body>
 
 </html>
