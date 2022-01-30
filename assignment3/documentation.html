@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Documentation For Phone API</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <h1> Resource Information: </h1>
+
+    - Response formats - JSON
+    - Requires authentication - No
+
+    <h1> Parameters: </h1>
+    NAME REQUIRED DESCRIPTION
+    - id - required - The numeric value that represents the location
+    from where to return trending information for from
+    - brand - optional - Returns results of the brand of the phone
+    - model - optional - Returns results of the model of the phone
+    - os - optional - Returns results of the operating system of the phone
+    - image - optional - Returns results of the image url of the phone
+    - screensize - optional - Returns results of the screensize of the phone
+
+    Example Request:
+    `INSERT INTO phones VALUES phones.db`
+
+    Example Response:
+    [
+    {
+    "id": 58831,
+    "brand": "Apple",
+    "model": "iPhone X",
+    "os": "iOS",
+    "image":
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png",
+    "screensize": 5
+    },
+    {
+    "id": 58832,
+    "brand": "Samsung",
+    "model": "Galaxy s8",
+    "os": "Android",
+    "image":
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Samsung_Galaxy_S8_and_S8_Plus.png/569px-Samsung_Galaxy_S8_and_S8_Plus.png",
+    "screensize": 6
+    }
+    ]
+</body>
+
+</html>

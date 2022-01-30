@@ -61,8 +61,7 @@ var app = express();
 
 // We need some middleware to parse JSON data in the body of our HTTP requests:
 var bodyParser = require("body-parser");
-app.use(bodyParser.json());
-//
+
 // We use the express validator to have a good way to handle body formats
 const { body, validationResult } = require('express-validator');
 
@@ -152,6 +151,8 @@ app.put('/:phone_id',
     body("screensize").isFloat().optional({ nullable: true, checkFalsy: true }).withMessage("Must be a Float Value"),
     function(req, res) {
 
+    // TODO: Handle Empty Body
+
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return errorResponse(res,errors)
@@ -179,13 +180,7 @@ app.put('/:phone_id',
                         return res.status(responseCode.ACCEPTED).json(rows[0])
                     });
                 }
-
-
-                // # Return db response as JSON
             });
-
-
-        // # Return db response as JSON
     });
 });
 
