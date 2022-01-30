@@ -24,13 +24,14 @@ const responseCode = {
     CREATED: 201,
     ACCEPTED: 202,
     NOCONTENT: 204,
-    ERROR: 400
+    ERROR: 400,
+    NOTFOUND: 404
 }
 
 // Error Response is Defined Here
 
 const errorResponse = (res, message = "Unprocessable error!", code = responseCode.ERROR) => {
-    return res.status(responseCode.ERROR).json({
+    return res.status(code).json({
         "status" : "Exception",
         "message": message
     })
@@ -100,7 +101,7 @@ app.get('/:phone_id', function(req, res) {
     }
     db.all(`SELECT * FROM phones WHERE id=?`, [req.params["phone_id"]], function(err, rows) {
         if(rows.length == 0) {
-            return errorResponse(res,  "No Phone found with the specified ID")
+            return errorResponse(res,  "No Phone found with the specified ID", responseCode.NOTFOUND)
         }
 
         // # Return db response as JSON
@@ -130,7 +131,7 @@ app.post('/',
             }else{
                 db.all(`SELECT * FROM phones WHERE id=?`, [this.lastID], function(err, rows) {
                     if(rows.length == 0) {
-                        return errorResponse(res,  "No Phone found with the specified ID")
+                        return errorResponse(res,  "No Phone found with the specified ID", responseCode.NOTFOUND)
                     }
 
                     // # Return db response as JSON
@@ -157,7 +158,7 @@ app.put('/:phone_id',
     }
     db.all(`SELECT * FROM phones WHERE id=?`, [req.params["phone_id"]], function(err, rows) {
         if(rows.length == 0) {
-            return errorResponse(res,  "No Phone found with the specified ID")
+            return errorResponse(res,  "No Phone found with the specified ID", responseCode.NOTFOUND)
         }
 
         // We are merging the current data with existing rows.
@@ -171,7 +172,7 @@ app.put('/:phone_id',
                 }else{
                     db.all(`SELECT * FROM phones WHERE id=?`, [req.params["phone_id"]], function(err, rows) {
                         if(rows.length == 0) {
-                            return errorResponse(res,  "No Phone found with the specified ID")
+                            return errorResponse(res,  "No Phone found with the specified ID", responseCode.NOTFOUND)
                         }
 
                         // # Return db response as JSON
