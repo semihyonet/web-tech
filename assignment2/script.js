@@ -37,12 +37,14 @@ function sortTable(n) {
   }
 }
 
+// This function is used to fetch all data from the server and dynamicaly modify our table
 const getAllItems = () => {
   $.ajax({
     method: "GET",
     url: "https://wt.ops.labs.vu.nl/api22/3ab02f27",
     dataType: "json"
   }).done(function (data) {
+    // After we fetch our data we start DOM Manipulation
     var content = `
     <table id="table">
     <caption id="caption">Product List</caption>
@@ -64,45 +66,34 @@ const getAllItems = () => {
     }
     content += "</table>"
     $("#table").replaceWith(content);
+     // Instead of appending we are replacing all our data and creating the table from start each time we render this function
   });
 }
 
 
 //task 2
 $(document).ready(function () {
-  $("#reset").click(function () {
-    $.ajax({
+  $("#reset").click(function () { // Whenever the reset button is clicked
+    $.ajax({ // We are performing an AJAX operation to our server
       method: "GET",
       url: "https://wt.ops.labs.vu.nl/api22/3ab02f27/reset",
       dataType: "json"
     }).then(() => {
-      getAllItems()
+      getAllItems() // After the fetch operation is done, we are once again getting all the Items
     });;
   })
 });
 
 //task 3
 $(document).ready(function () {
-  getAllItems()
+  getAllItems() // We are fetching data from the server whenever page is loaded and ready
 });
 
-/*
-//task 4
-$(document).ready(function(){
-  $("#submit").click(function(){
-    $.ajax({
-      type: "POST",
-      url: "https://wt.ops.labs.vu.nl/api22/3ab02f27",
-      dataType: "json",
-    });
-  });
-});
-*/
 
 // Task 4
 $(document).ready(function () {
   $("#submit").click(function () {
-    var data = {
+    var data = { // We are forming an array to post into our server
       image: $('#image').val(),
       brand: $('#brand').val(),
       model: $('#model').val(),
@@ -112,22 +103,10 @@ $(document).ready(function () {
     $.ajax({
       method: "POST",
       url: "https://wt.ops.labs.vu.nl/api22/3ab02f27",
-      data,
+      data, // Means data:data, since both have the same name it's safe to use this shortcut
       dataType: "json"
     }).then(() => {
-      getAllItems()
+      getAllItems() // Whenever we use the CRUD operations of our server we fetch data
     });;
   })
 });
-
-
-//i use this function to see if array is updated
-// $(document).ready(function () {
-//   $.ajax({
-//     url: "https://wt.ops.labs.vu.nl/api22/3ab02f27",
-//     method: "GET",
-//     dataType: "json"
-//   }).done(function (data) {
-//     console.log(data);
-//   });
-// });

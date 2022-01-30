@@ -212,15 +212,23 @@ header{
 }
 
 #submit{
-    margin: 15px 0px 15px 0px;
-    width: 90vw;
-    font: italic 20px Bauhaus, sans-serif;
     color: white;
     background-color: #F25278;
 }
 
 #submit:active{
     background-color: #3D3D3D;
+}
+
+.form-btn {
+    margin: 5px 0px 15px 20px;
+    width: 90vw;
+    font: italic 20px Bauhaus, sans-serif;
+    color: white;
+    background-color: rgb(94, 94, 255);
+}
+.form-btn:hover{
+    background-color: #fff;
 }
 
 #reset {
