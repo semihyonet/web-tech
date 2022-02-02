@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Documentation For Phone API</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <style>
+        body {
+            background-color: powderblue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        h1 b {
+            background-color: black;
+            color: white;
+            padding: 9px;
+            border-radius: 5%;
+        }
+
+        p {
+            color: red;
+        }
+
+        table {
+            background-color: beige;
+            padding: 8px 8px;
+            border-radius: 3%;
+        }
+
+        table {
+            background-color: beige;
+            padding: 8px 8px;
+            border-radius: 3%;
+            width: 100%;
+        }
+
+        .method {
+            margin-top: 5px;
+        }
+
+        .details {
+            background-color: white;
+            padding: 1px 0px 1px 8px;
+            margin: 12px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Phones API Collection</h1>
+    </header>
+
+    <div class="method" id="index">
+
+        <h1><b>GET</b> : Index </h1>
+        <strong>The GET method requests a representation of the specified resource. The GET Index requests a
+            representation of the whole data in the web server. The results are paginated. To get to the next page,
+            insert query parameter `page` to specify which page you want to go. </strong>
+        <div class="details">
+
+            <h2> URL</h2>
+            <p>http://localhost:3000</p>
+            <h2> Information</h2>
+            <p>Response formats: JSON</p>
+
+            <h2>Parameters</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Param Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>page </td>
+                    <td>Query</td>
+                    <td>Required</td>
+                    <td>Page requested</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <h2>Example Request </h2>
+            <p>~EMPTY~</p><br>
+            <h2>Example Response</h2>
+            <p> <b>STATUSCODE:201</b><br>Body:
+                [<br>{ <br>
+                "id": 4, <br>
+                "brand": "Apple", <br>
+                "model": "IPhone X", <br>
+                "os": "OSX", <br>
+                "image":
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+                <br>"screensize": 5.12 <br>
+                },
+                <br> ]
+            </p><br>
+
+        </div>
+    </div>
+
+    <div class="method" id="show">
+
+        <h1><b>GET</b> : Show</h1>
+        <strong>The GET method requests a representation of the specified resource. The GET Show requests a
+            representation
+            of a specific item with a specific id paramater.</strong>
+        <div class="details">
+            <h2> URL</h2>
+            <p>http://localhost:3000</p>
+            <h2> Information</h2>
+            <p>Response formats: JSON</p>
+            <h2>Parameters</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Param Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>phone_id</td>
+                    <td>URL</td>
+                    <td>Required</td>
+                    <td>ID of the phone requested</td>
+                    <td>2</td>
+                </tr>
+            </table>
+            <h2>Example Request</h2>
+            <p>curl --location --request GET 'http://localhost:3000/2'</p><br>
+            <h2>Exmample Response</h2>
+            <p> <b>STATUSCODE:200</b><br>Body:
+                { <br>
+                "id": 2, <br>
+                "brand": "Samsung", <br>
+                "model": "IPhone X", <br>
+                "os": "LINUX", <br>
+                "image":
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+                <br>"screensize": 2 <br>
+                }
+            </p><br>
+        </div>
+
+    </div>
+    <div class="method" id="create">
+
+        <h1><b>POST</b> : Create</h1>
+        <strong>When this route is triggered a new instance of Phone is added to the database. Therefore creating a new one.</strong>
+        <div class="details">
+
+            <h2> URL</h2>
+            <p>http://localhost:3000</p>
+            <h2> Information</h2>
+            <p>Response formats: JSON</p>
+            <h2>Parameters</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Param Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>phone_id</td>
+                    <td>URL</td>
+                    <td>Required</td>
+                    <td>ID of the phone requested</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>name</td>
+                    <td>Body</td>
+                    <td>Required</td>
+                    <td>Name of the phone</td>
+                    <td>Iphone X</td>
+                </tr>
+
+                <tr>
+                    <td>os</td>
+                    <td>Body</td>
+                    <td>Required</td>
+                    <td>Operating System of the phone</td>
+                    <td>Android</td>
+                </tr>
+
+                <tr>
+                    <td>model</td>
+                    <td>Body</td>
+                    <td>Required</td>
+                    <td>Model of the phone</td>
+                    <td>Galaxy S5</td>
+                </tr>
+
+                <tr>
+                    <td>screensize</td>
+                    <td>Body</td>
+                    <td>Required</td>
+                    <td>Screensize of the phone</td>
+                    <td>2048</td>
+                </tr>
+            </table>
+            <h2>Example Request</h2>
+            <p>curl --location --request POST 'http://localhost:3000' \
+                --data-raw '{
+                "os":"OSX",
+                "brand": "Apple",
+                "model" : "Iphone X",
+                "image":
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+                "screensize":5.12
+                }'</p>
+            <h2>Example Response</h2>
+            <p> <b>STATUSCODE:201</b><br>Body:
+                { <br>
+                "id": 4, <br>
+                "brand": "Apple", <br>
+                "model": "IPhone X", <br>
+                "os": "OSX", <br>
+                "image":
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+                <br>"screensize": 5.12 <br>
+                }
+            </p><br>
+        </div>
+    </div>
+    <div class="method" id="update">
+
+        <h1><b>PUT</b> : Updates the Phone</h1>
+        <strong>This method updates the requested Phone model with the fields sent in the body. Requested phone is
+            determined by the phone_id in the url parameter </strong>
+        <div class="details">
+
+            <h2> URL</h2>
+            <p>http://localhost:3000/:phone_id</p>
+            <h2> Information</h2>
+            <p>Response formats: JSON</p>
+            <h2>Parameters</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Param Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>phone_id</td>
+                    <td>URL</td>
+                    <td>Required</td>
+                    <td>ID of the phone requested</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>name</td>
+                    <td>Body</td>
+                    <td>Optional</td>
+                    <td>Name of the phone</td>
+                    <td>Iphone X</td>
+                </tr>
+
+                <tr>
+                    <td>os</td>
+                    <td>Body</td>
+                    <td>Optional</td>
+                    <td>Operating System of the phone</td>
+                    <td>Android</td>
+                </tr>
+
+                <tr>
+                    <td>model</td>
+                    <td>Body</td>
+                    <td>Optional</td>
+                    <td>Model of the phone</td>
+                    <td>Galaxy S5</td>
+                </tr>
+
+                <tr>
+                    <td>screensize</td>
+                    <td>Body</td>
+                    <td>Optional</td>
+                    <td>Screensize of the phone</td>
+                    <td>2</td>
+                </tr>
+            </table>
+            <h2>Example Request</h2>
+            <p>curl --location --request PUT 'http://localhost:3000/4' \
+                --data-raw '{
+                "model": "Iphone X"
+                }'</p>
+            <h2>Example Response</h2>
+            <p> <b>STATUSCODE:200</b><br>Body:
+                { <br>
+                "id": 4, <br>
+                "brand": "Samsung", <br>
+                "model": "IPhone X", <br>
+                "os": "LINUX", <br>
+                "image":
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fairphone_3_modules_on_display.jpg/320px-Fairphone_3_modules_on_display.jpg",
+                <br>"screensize": 2 <br>
+                }
+            </p><br>
+            <div class="details">
+            </div>
+        </div>
+        <div class="method" id="delete">
+
+            <h1><b>DELETE</b> : Deletes a Phone</h1>
+            <strong>The DELETE method deletes the specified resource.</strong>
+            <div class="details">
+
+                <h2> URL</h2>
+                <p>http://localhost:3000</p>
+                <h2> Information</h2>
+                <p>Response formats: JSON</p>
+                <h2>Parameters</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Param Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>phone_id</td>
+                       <td>URL</td>
+                        <td>Required</td>
+                        <td>The numeric value that represents the location from where to return trending information for
+                            from.
+                        </td>
+                        <td>4</td>
+                    </tr>
+                </table>
+                <h2>Example Request</h2>
+                <p>curl --location --request DELETE 'http://localhost:3000/4'</p>
+                <h2>Example Response</h2>
+                <p>
+                    <b>STATUSCODE:204</b><br>Body: ~EMPTY~
+                </p>
+            </div>
+        </div>
+</body>
+
+</html>
