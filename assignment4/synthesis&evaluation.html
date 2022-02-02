@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Synthesis & Evaluation</title>
+
+   <style>
+      body {
+          background-color: powderblue;
+          font-family: 'Courier New', Courier, monospace;
+      }
+
+      h1 {
+          background-color: black;
+          color: white;
+          padding: 9px;
+          border-radius: 5%;
+      }
+
+      h3 {
+         color:cadetblue;
+         margin-bottom: 5px;
+      }
+
+
+      p {
+         background-color: beige;
+          padding: 8px 8px;
+          border-radius: 3%;
+          border-spacing: 10px;
+      }
+
+      li {
+         background-color: beige;
+          padding: 8px 8px;
+          border-radius: 3%;
+          border-spacing: 10px;
+      }
+
+      table {
+          background-color: beige;
+          padding: 8px 8px;
+          border-radius: 3%;
+          border-spacing: 12px;
+      }
+
+      #ourTitle {
+         background-color: white;
+          color: black;
+          padding: 9px;
+          border-radius: 5%;
+      }
+
+      .appendix {
+         background-color: white;
+          padding: 9px;
+          border-radius: 5%;
+      }
+  </style>
+</head>
+<body>
+
+   <h1 id="ourTitle">Assignment "Synthesis & Evaluation"</h1>
+
+   <h1>Self-evaluation report</h1>
+
+   <p><b>2022-02-01, 35th group, Semih Yonet and Matas Pajarskas</b></p>
+
+   <h2>Introduction section:</h2>
+   <p>The Website, which was developed during Assignment 1 and Assignment 2 has the name of ‘WEBSHOP A1’ which is displayed on our navigation bar. The navigation bar of our website also has a ‘Home’ button, which directs a user to the product list table, ‘Order’ button directs user to the end of our website to the product form section, and the ‘Google’ button opens google.com web page. Below we have a product list, where the products of our website are displayed. Product contents like image, brand, model, operating system, screensize are shown in a table. Further we provide the information about our default products, insert a youtube video on the difference between our default products, and name things on why people should use our website. Then we display the delivery information, to introduce our customers to our shipment details. The last section of our website is the product attachment form, where the users of our website can add custom products to the website by specifying their content. And finally, we have a ‘submit’ button, which submits the information provided via the form and the ‘reset’ button, which resets the data to the default.</p>
+
+   <h2>Guidelines that are most relevant to our page are the following: </h2>
+   <ul>
+      <li>Guideline 1.1</li>
+      <li>Guideline 1.3</li>
+   </ul>
+
+   <h2 class="appendix">Appendix A</h2>
+
+   <h3>Web Content Accessibility Guidelines</h3>
+
+   <table>
+      <tr>
+         <th>Guidelines</th>
+         <th>Description</th>
+      </tr>
+      <tr>
+         <td>Guideline 1.1</td>
+         <td>
+            All non-text content has an alternative text in case of errors. Non-text Content - ‘alt’ is included in all ‘img’ tags.
+         </td>
+      </tr>
+      <tr>
+         <td>Guideline 1.3</td>
+         <td>
+            Width and height measurements of our contents were specified in viewport units to keep the readable layout of our webpage when screensize is changing. Information is displayed in text understandably. 
+            Sequence of our text is very clear. Our content does not rely on sensory characteristics, because we use viewport units to display  our content.
+         </td>
+      </tr>
+      <tr>
+         <td>Guideline 1.4</td>
+         <td>
+            Foreground and background are separated so that it is visually comfortable to see. 
+            Text and color are two visual means of conveying information in our website. 
+            Our website does not contain any audio. Our website fits the requirement of text and image of text contrast ratio of at least 4,5:1. Text in our website can be resized up to 200 percent without loss of content or functionality. Images of text can be visually customized because of our responsive design. The visual presentation of text and images of text in our website has a contrast ratio of at least 7:1. Our website does not contain any audio. Foreground and background colors cannot be selected by the user. The width is no more than 80 characters. Text is aligned to both the left and the right margins. Line spacing is default. Text is resized in a way that user does not have to scroll horizontally to read a line of text on a full-screen window. Images of text are used for decoration. 
+         </td>
+      </tr>
+      <tr>
+         <td>Guideline 2.1</td>
+         <td>
+            Some functionality of our website is accessible thought keyboard. Some functionality like input could be operated through a keyboard interface, but mouse is the best tool for navigating the website. Keyboard focus can be moved to a component of the page using a keyboard interface. Some functionality like inputs should be operated through a keyboard, but mouse works the best while navigating the website.   
+         </td>
+      </tr>
+      <tr>
+         <td>Guideline 2.4</td>
+         <td>
+            Website provides ways to help users to navigate, find content and determine where they are in the website. Information is not repeated on our website. Our web page have titles and descriptions. The navigation of our website is sequential, and the order of our components is easy to follow and operate. The purpose of our links can be easily understandable from the text alone. Our website has only a single Web page. Headings and labels clearly describe the topics discussed on our website. Keyboard use in our input form is clearly visible. The user's location on the web page is clearly visible. Link purpose is very understandable from the link text. Headings are used to organize the content on our website. 
+         </td>
+      </tr>
+   </table>
+
+   <h2>Improvement plan</h2>
+
+   <table>
+      <tr>
+         <th>Appendix A</th>
+         <th>Description</th>
+      </tr>
+      <tr>
+         <td>informative</td>
+         <td>Create a paragraph for information purposes. Provide more information about default products using a p tag.</td>
+      </tr>
+      <tr>
+         <td>video</td>
+         <td>Include a video about the difference between the default products. Do so by using iframe tag and including a youtube video source inside of it.</td>
+      </tr>
+      <tr>
+         <td>link purpose</td>
+         <td>Linking the text from your website with a certain web page. Use href to referense the link where you want a user to be directed.</td>
+      </tr>
+      <tr>
+         <td>blinking</td>
+         <td>Draw attention of the user by making a certain headline blink. Do so by creating a function in javascript which changes the content's visibility repeatedly during a certain timeframe.
+         </td>
+      </tr>
+      <tr>
+         <td>real-time event</td>
+         <td>Draw attention of the user by counting down to the end of the discount. Create a function in javascript which stores a current data and repeatedly calculates the time left until the specified deadline. After the clock reaches the deadline, the text "EXPIRED" appears.</td>
+   </table>
+
+   <h2 class="appendix">Appendix B</h2>
+
+   <h3>TA Feedback Assignment 1 & 2</h3>
+   <table>
+      <tr>
+         <th>Assignment</th>
+         <th>Changes</th>
+         <th>Description</th>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td>Added HTML Comments</td>
+         <td>We added html comments to clarify some stuff about the HTML File</td>
+      </tr>
+
+      <tr>
+         <td>1</td>
+         <td>Added CSS Comments</td>
+         <td>We added CSS comments to clarify some stuff about the CSS Attributes</td>
+      </tr>
+
+      <tr>
+         <td>2</td>
+         <td>Changed CSS File's name</td>
+         <td>Changed CSS files name from main to style.css </td>
+      </tr>
+
+      <tr>
+         <td>2</td>
+         <td>Canceled default event handling on form</td>
+         <td> Deleted the formal HTML methods to get and post data in our HTML File, because we are already performing
+            those operations with JQuery</td>
+      </tr>
+
+      <tr>
+         <td>2</td>
+         <td>Added JS Comments</td>
+         <td>We added html comments to clarify some stuff about the JS File such as AJAX Operations and Dom injections</td>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td>Added all HTML Attributes needed to our code</td>
+         <td>We added and checked to be sure if we used all HTML Attributes requested from us to be used</td>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td>Added all CSS Attributes needed to our code</td>
+         <td>We added and checked to be sure if we used all CSS Attributes requested from us to be used</td>
+      </tr>
+   </table>
+
+   <h1>Implementation of the improvement plan</h1>
+   <p>The submission contains the improved versions of assignments 1 and 2. Those can be find in the uploaded zip file. Through running the Assignment2 and Assignment3 files. </p>
+Projects Github:<h2>https://github.com/semihyonet/web-tech</h2>
+</body>
+</html>

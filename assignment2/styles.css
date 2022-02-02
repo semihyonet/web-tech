@@ -212,9 +212,6 @@ header{
 }
 
 #submit{
-    margin: 15px 0px 15px 0px;
-    width: 90vw;
-    font: italic 20px Bauhaus, sans-serif;
     color: white;
     background-color: #F25278;
 }
@@ -223,10 +220,49 @@ header{
     background-color: #3D3D3D;
 }
 
+.form-btn {
+    margin: 5px 0px 15px 20px;
+    width: 90vw;
+    font: italic 20px Bauhaus, sans-serif;
+    color: white;
+    background-color: rgb(94, 94, 255);
+}
+.form-btn:hover{
+    background-color: #fff;
+}
+
 #reset {
     margin: 5px 0px 15px 20px;
     width: 90vw;
     font: italic 20px Bauhaus, sans-serif;
     color: white;
     background-color: rgb(94, 94, 255);
+}
+
+#blinking {
+    color:#F25278;
+    font: normal 20px Bauhaus, sans-serif;
+}
+
+#informative {
+    margin: 15px;
+    border: 3px dashed rgb(94, 94, 255);
+    padding: 10px;
+    font: normal 17px Braganza ITC, Bold;
+}
+
+h2 {
+    text-align: center;
+    font: normal 25px Galahad, galahad-std;
+}
+
+#countdown {
+    text-align: center;
+    font: normal 20px Bauhaus, sans-serif;
+}
+
+#yt_video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
