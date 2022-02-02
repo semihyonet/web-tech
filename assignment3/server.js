@@ -79,14 +79,11 @@ query("page").default(1),
 function (req, res) {
 
 
-    console.log(req.query)
-
     if (isNaN(req.query["page"])) {
         return errorResponse(res, "Page number has to be a number")
     }
     db.all(`SELECT * FROM phones LIMIT 5 OFFSET ?`, req.query["page"] ,function (err, rows) {
         // # Return db response as JSON
-        // TODO: Add Pagination
         return res.status(responseCode.OK).json(rows)
     });
 });
