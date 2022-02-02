@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-We define our tags, used files, and html title in the head section of the HTML -->
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Web Shop A1</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="script.js"></script>
     </head>
+<!-We use our graphical components in the body section->
     <body>
+    <!-NavBar is defined as header due to it's styling it will always stay up top->
         <header>
             <h1>Webshop A1<img id="logo" alt="logo" height="40" width="70" src="https://www.pngall.com/wp-content/uploads/2017/05/Copyright-Symbol-PNG-Images.png"/></h1>
             <nav class="navbar">
@@ -29,7 +32,7 @@
                 <p>Sale Countdown:</p>
                 <p id="clock"></p>
             </section>
-
+            <!-We are using a table to add recieved data from the server with DOM Manipulations->
             <table id="table">
                 <caption id="caption">Product List</caption>
                 <tr id="content">
@@ -60,7 +63,7 @@
                 </p>
                 <p>Source: <a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S8">Click here</a></p>
             </section>
-            <section id="informative">
+            <section >
                 <p>
                     The Samsung Galaxy S8 and Samsung Galaxy S8+ are Android smartphones produced by Samsung Electronics as the eighth generation of the Samsung Galaxy S series. The S8 and S8+ were unveiled on 29 March 2017 and directly succeeded the Samsung Galaxy S7 and S7 edge, with a North American release on 21 April 2017 and international rollout throughout April and May. The Samsung Galaxy S8 Active was announced on 8 August 2017 and is exclusive to certain U.S. cellular carriers.
                 </p>
@@ -102,7 +105,11 @@
                 <p>All orders are processed within 2 to 4 business days (excluding weekends and holidays) after receiving your order confirmation email. You will receive another notification when your order has shipped.</p>
                 <pre>-Webshop A1 team</pre>
             </section>
-            <form class="inputs" id="inputs" action="https://wt.ops.labs.vu.nl/api22/3ab02f27" method="post">
+
+            <!-We are using this form to send new data to our server->
+
+
+            <form class="inputs" id="inputs">
                 <label for="image">Picture url:<br></label>
                 <input type="text" id="image" required name="image"><br>
                 <label for="brand">Brand:<br></label>

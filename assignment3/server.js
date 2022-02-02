@@ -63,6 +63,9 @@ var app = express();
 var bodyParser = require("body-parser");
 app.use(bodyParser.json())
 
+var cors = require("cors")
+app.use(cors())
+
 // We use the express validator to have a good way to handle body formats
 const { body, validationResult, query } = require('express-validator');
 
@@ -117,6 +120,7 @@ app.post('/',
     function (req, res) {
             const errors = validationResult(req);
         if (!errors.isEmpty()) {
+            console.log("incoming POST Request: ",req.body)
             return errorResponse(res, errors)
         }
 
